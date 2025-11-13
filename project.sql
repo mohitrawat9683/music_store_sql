@@ -159,7 +159,9 @@ rank() over(order by sum(il.unit_price*il.quantity) desc) as revenue_ranked
  invoice_line il on i.invoice_id=il.invoice_id 
  group by 
  country;
- 
+
+
+-- ranking album based on popularity
  SELECT 
     a.album_id,
     SUM(il.unit_price * il.quantity) AS total_sales,
